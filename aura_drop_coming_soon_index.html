@@ -1,138 +1,87 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>𝘼𝙪𝙧𝙖𝘿𝙧𝙤𝙥 — COMMING SOON</title>
-  <link rel="icon" href="data:,"><!-- tiny empty favicon -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drop.herree — COMING SOON -</title>
+  <link rel="icon" href="data:,">
+
   <style>
     :root{
-      --bg1: #021025; /* darkest */
-      --bg2: #05203a; /* mid */
-      --accent: #5ee2ff;
-      --glass: rgba(255,255,255,0.06);
+      --bg: #2f4cb6; /* extracted from logo */
+      --accent: #ffffff;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
     body{
-      background: linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 60%);
-      color:#e6f6ff;
+      background: linear-gradient(180deg, rgba(0,0,0,0.03), rgba(255,255,255,0.02)), var(--bg);
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:32px;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-
-    .card{
-      width:100%;
-      max-width:920px;
-      text-align:center;
-      padding:48px 32px;
-      border-radius:20px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      box-shadow: 0 8px 30px rgba(2,16,37,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-      backdrop-filter: blur(6px) saturate(120%);
-      border: 1px solid rgba(255,255,255,0.04);
-    }
-
-    .logo{
-      display:inline-grid;
-      place-items:center;
-      width:110px;height:110px;border-radius:22px;
-      margin:0 auto 18px auto;
-      background: radial-gradient(circle at 30% 20%, rgba(94,226,255,0.15), transparent 20%),
-                  linear-gradient(135deg, rgba(94,226,255,0.06), rgba(83,128,255,0.04));
-      box-shadow: 0 6px 18px rgba(6,22,40,0.6);
-      border: 1px solid rgba(94,226,255,0.12);
-      transform: translateZ(0);
-    }
-
-    .logo svg{width:56px;height:56px}
-
-    h1{
-      margin:6px 0 8px 0;
-      font-weight:800;
-      letter-spacing:0.4px;
-      font-size:38px;
-      color:linear-gradient(90deg,#fff,#aeeeff);
-    }
-
-    .tagline{
-      margin:0 0 26px 0;
-      color:rgba(230,246,255,0.85);
-      font-weight:400;
-      font-size:15px;
-    }
-
-    .coming{
-      display:inline-block;
-      padding:18px 34px;
-      border-radius:12px;
-      font-weight:700;
-      letter-spacing:1px;
-      background: linear-gradient(90deg, rgba(94,226,255,0.08), rgba(120,95,255,0.04));
-      border: 1px solid rgba(94,226,255,0.12);
+      padding:24px;
       color:var(--accent);
-      box-shadow: 0 6px 20px rgba(9,20,36,0.55);
+    }
+    .card{
+      text-align:center;
+      max-width:900px;
+      width:100%;
+      padding:48px;
+      border-radius:18px;
+      background: rgba(255,255,255,0.02);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+      border:1px solid rgba(255,255,255,0.04);
+    }
+    .logo{
+      max-width:460px;
+      width:75%;
+      margin:0 auto 18px auto;
+      display:block;
+    }
+    h1{
+      font-size:36px;margin:8px 0 6px 0;
+      letter-spacing:0.6px;font-weight:700;
+      color:var(--accent);
+    }
+    p.lead{
+      margin:6px 0 18px 0;
+      color: rgba(255,255,255,0.9);
       font-size:16px;
     }
-
-    .byline{margin-top:18px;color:rgba(230,246,255,0.6);font-size:13px}
-
-    .pulse {
-      animation: pulse 2.6s ease-in-out infinite;
+    .coming{
+      display:inline-block;
+      padding:14px 28px;
+      border-radius:12px;
+      background:rgba(255,255,255,0.06);
+      color:var(--accent);
+      font-weight:700;
+      letter-spacing:1px;
+      margin-top:12px;
     }
-    @keyframes pulse {
-      0%{transform:scale(1);opacity:1}
-      50%{transform:scale(1.04);opacity:0.9}
-      100%{transform:scale(1);opacity:1}
+    .byline{
+      margin-top:20px;
+      color:rgba(255,255,255,0.75);
+      font-size:13px;
     }
-
-    /* responsive */
     @media (max-width:520px){
       .card{padding:28px}
-      h1{font-size:28px}
-      .logo{width:86px;height:86px}
-      .coming{padding:14px 22px;font-size:15px}
+      h1{font-size:26px}
+      .logo{width:85%}
     }
-
-    /* subtle floating background shapes */
-    .bg-shape{
-      position:fixed;pointer-events:none;filter:blur(40px);opacity:0.18;z-index:0
-    }
-    .shape-1{width:420px;height:420px;right:-120px;top:-80px;background:linear-gradient(120deg,#063a5f, #2b2d6b)}
-    .shape-2{width:320px;height:320px;left:-100px;bottom:-100px;background:linear-gradient(120deg,#032b4a,#12365a)}
-
   </style>
 </head>
 <body>
-  <div class="bg-shape shape-1"></div>
-  <div class="bg-shape shape-2"></div>
 
-  <div class="card" role="main" aria-labelledby="title">
-    <div class="logo pulse" aria-hidden="true">
-      <!-- simple A monogram -->
-      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="g1" x1="0" x2="1">
-            <stop offset="0" stop-color="#5ee2ff"/>
-            <stop offset="1" stop-color="#7b61ff"/>
-          </linearGradient>
-        </defs>
-        <rect x="0" y="0" width="64" height="64" rx="10" fill="url(#g1)" opacity="0.12" />
-        <path d="M16 46 L32 16 L48 46 L40 46 L32 30 L24 46 Z" fill="url(#g1)"/>
-      </svg>
-    </div>
+  <div class="card">
+    <!-- Insert your logo below -->
+    <img class="logo" src="your-logo-file-name-here.jpg" alt=""C:\Users\Mohammed Sinan\OneDrive\Documents\AuraDrop\logo.jpg"">
 
-    <h1 id="title">AuraDrop</h1>
-    <p class="tagline">Curated goods, shipped for you — launching soon.</p>
-
-    <div class="coming">MAIN PAGE — COMING SOON</div>
-
-    <p class="byline">by <strong>- BY TEAM -</strong></p>
+    <h1>Drop.herree</h1>
+    <p class="lead">COMING SOON</p>
+    <div class="coming">Launching Shortly</div>
+    <p class="byline">by <strong>BY Drop.Herre </strong></p>
   </div>
 
 </body>
